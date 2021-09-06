@@ -29,7 +29,7 @@ class TaskController {
     }
 
     async all(req, res) {
-        await taskModel.find({ macaddress: { '$in': req.body.macaddress } })
+        await taskModel.find({ macaddress: { '$in': req.params.macaddress } })
             .sort('entrega')
             .then(response => {
                 return res.status(200).json(response)
@@ -71,8 +71,8 @@ class TaskController {
     async late(req, res) {
         await taskModel.find({
                 'entrega': { '$lt': current },
-                'macaddress': { '$in': req.body.macaddress },
-                'devolucao': { '$in': req.body.devolucao = false }
+                'macaddress': { '$in': req.params.macaddress },
+                'devolucao': { '$in': req.params.devolucao = false }
             })
             .sort('entrega')
             .then(response => {
@@ -85,7 +85,7 @@ class TaskController {
 
     async today(req, res) {
         await taskModel.find({
-                'macaddress': { '$in': req.body.macaddress },
+                'macaddress': { '$in': req.params.macaddress },
                 'entrega': { '$gte': startOfDay(current), '$lte': endOfDay(current) }
             })
             .sort('entrega')
