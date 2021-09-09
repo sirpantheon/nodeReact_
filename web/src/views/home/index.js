@@ -1,7 +1,18 @@
-import React from 'react';
+import React from 'react'
+import * as S from './styles'
+
+//components
+
+import Header from '../../components/header'
 
 function Home() {
-    return <h1>Home</h1>;
+    return (
+    <S.Container>
+
+      <Header/>
+
+    </S.Container>
+    )
   }
   
   export default Home;
