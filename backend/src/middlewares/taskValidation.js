@@ -4,6 +4,7 @@ const { isPast } = require('date-fns')
 const taskValidation = async(req, res, next) => {
 
     const {
+        type,
         nome,
         registro,
         especialidade,

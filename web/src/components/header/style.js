@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div `
     width:100%;
-    height:100px;
+    height:70px;
     background:#F0F1F5;
-    border-bottom:5px solid #83D6DE;
+    border-bottom:5px solid #40407a;
     display:flex
 `
 
@@ -29,7 +29,7 @@ export const rightSide = styled.div `
     display:flex;
     align-items: center;
     justify-content: flex-end;
-
+    
     a{
         color:#000;
         font-weight: bold;

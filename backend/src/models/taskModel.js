@@ -3,6 +3,7 @@ const mongoose = require('../config/database')
 const Schema = mongoose.Schema
 
 const taskSchema = new Schema({
+    type: { type: Number, required: true },
     nome: { type: String, required: true },
     registro: { type: Number, required: true },
     especialidade: { type: String, required: true },

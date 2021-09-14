@@ -12,7 +12,7 @@ function Header(){
             <S.rightSide>
                 <a href="#">Inicio</a>
                 <a href="#">Registrar Chave</a>
-                <a href="#">Registrar Puerpera</a>
+                <a href="#">Registrar Puérpera</a>
                 <a href="#">Sicronizar</a>
             </S.rightSide>
 
