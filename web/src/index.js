@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './views/home';
+import Task from './views/task';
 
-//aula 43
+//aula 49
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Task />
   </React.StrictMode>,
   document.getElementById('root')
 );

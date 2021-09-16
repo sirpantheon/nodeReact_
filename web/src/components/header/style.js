@@ -40,6 +40,12 @@ export const rightSide = styled.div `
         &:hover{
             color:#83D6DE;
         }
+
+        span{
+            color:#ff0000;
+            background:#000;
+            border-radius:40%
+        }
     }
 
 `

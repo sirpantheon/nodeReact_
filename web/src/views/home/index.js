@@ -15,6 +15,7 @@ function Home() {
 
   const [filterActived, setFilterActived]=useState('today')
   const [tasks,setTasks]=useState([])
+  const [lateCount,setLateCount] = useState()
 
   async function loadTask(){
     await api.get(`/task/filter/${filterActived}/11:11:11:11:11:11`)
@@ -22,18 +23,25 @@ function Home() {
       setTasks(response.data)
     })
   }
+  async function lateVerify(){
+    await api.get(`/task/filter/late/11:11:11:11:11:11`)
+    .then(response=>{
+      setLateCount(response.data.length)
+    })
+  }
 
   useEffect(() =>{
     loadTask()
+    lateVerify()
   },[filterActived])
 
 
     return (
     <S.Container>
 
-      <Header/>
+      <Header />
 
-      <S.FilterArea>
+      <S.FilterArea lateCount={lateCount}>
 
         <button type="button" onClick={()=>setFilterActived("all")}>
           <FilterCard title="Todos"    actived={filterActived == "all"} />
@@ -44,7 +52,7 @@ function Home() {
         </button>
         
         <button type="button" onClick={()=>setFilterActived("late")}>
-          <FilterCard title="Atrasados"actived={filterActived == "late"} />
+          <FilterCard title={`Pendentes - ${lateCount}`} actived={filterActived == "late"} />
         </button>
         
         <button type="button" onClick={()=>setFilterActived("Puérpera")}>
@@ -54,7 +62,7 @@ function Home() {
       </S.FilterArea>
 
       <S.Title>
-        <h3>REGISTROS</h3>
+        <h3>{filterActived == 'late'? "PENDÊNCIAS" : 'REGISTROS'} </h3>
       </S.Title>
 
       <S.Content>

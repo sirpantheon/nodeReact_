@@ -2,7 +2,8 @@ import React from 'react';
 import {format} from 'date-fns'
 
 import * as S from './style'
-import iconMask from '../../assets/acompanhante.png'
+
+import typeIcons from '../../utils/typeicons'
 
 function taskCard({type,nome,registro,especialidade,entrega}){
 
@@ -12,7 +13,7 @@ function taskCard({type,nome,registro,especialidade,entrega}){
     return (
         <S.Container>
             <S.TopCard>
-                <img src={iconMask} alt="icone" />
+                <img src={typeIcons[type]} alt="icone" />
                 <h3>{nome}</h3>
                 <h3>{registro}</h3>
                 <h3>{especialidade}</h3>

@@ -1,7 +1,8 @@
 import React from 'react'
 import * as S from './style'
+import icone from '../../assets/masculino.png'
 
-function Header(){
+function Header({lateCount}){
     return (
         <S.Container>
 
@@ -14,6 +15,10 @@ function Header(){
                 <a href="#">Registrar Chave</a>
                 <a href="#">Registrar Puérpera</a>
                 <a href="#">Sicronizar</a>
+                <a href="#">
+                    <img src="icone" alt=""/>
+                    <span>{lateCount}</span>                
+                </a>
             </S.rightSide>
 
         </S.Container>
