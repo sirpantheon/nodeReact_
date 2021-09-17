@@ -1,69 +1,20 @@
-  import React, {useState , useEffect} from 'react'
+  import React, {useState } from 'react'
   import * as S from './styles'
-  
-  import api from '../../services/api'
-  
+
   //components
   
   import Header from '../../components/header'
   import Footer from '../../components/footer'
-  import FilterCard from '../../components/filterCard'
   import TypeIcons from '../../utils/typeicons'
 
   function Task() {
-  
-    const [filterActived, setFilterActived]=useState()
-    const [tasks,setTasks]=useState([])
-    const [lateCount,setLateCount] = useState()
+
     const [type,setType]= useState()
-  
-    async function loadTask(){
-      await api.get(`/task/filter/${filterActived}/11:11:11:11:11:11`)
-      .then(response=>{
-        setTasks(response.data)
-      })
-    }
-    async function lateVerify(){
-      await api.get(`/task/filter/late/11:11:11:11:11:11`)
-      .then(response=>{
-        setLateCount(response.data.length)
-      })
-    }
-  
-    useEffect(() =>{
-      loadTask()
-      lateVerify()
-    },[filterActived])
-  
-  
+
       return (
       <S.Container>
   
         <Header />
-  
-        <S.FilterArea lateCount={lateCount}>
-  
-          <button type="button" onClick={()=>setFilterActived("all")}>
-            <FilterCard title="Todos"    actived={filterActived == "all"} />
-          </button>
-          
-          <button type="button" onClick={()=>setFilterActived("today")}>
-            <FilterCard title="Hoje"     actived={filterActived == "today"} />
-          </button>
-          
-          <button type="button" onClick={()=>setFilterActived("late")}>
-            <FilterCard title={`Pendentes - ${lateCount > 0 ? lateCount:0}`} actived={filterActived == "late"} />
-          </button>
-          
-          <button type="button" onClick={()=>setFilterActived("Puérpera")}>
-            <FilterCard title="Puérpera"actived={filterActived == "Puérpera"} />
-          </button>
-  
-        </S.FilterArea>
-  
-        <S.Title>
-          <h3>{filterActived == 'late'? "PENDÊNCIAS" : 'REGISTROS'} </h3>
-        </S.Title>
 
 
         <S.Form>    
@@ -78,6 +29,91 @@
                     ))
                 }
             </S.typeIcons>
+            <S.inputs>
+              <S.input>
+                <span>Nome</span>
+                <input type="text" placeholder="COLABORADOR/ACOMPANHANTE"></input>
+              </S.input>
+
+              <S.input>
+                <span>Registro</span>
+                <input type="text" placeholder="CRM/DRT/RG/CPF"></input>
+              </S.input>
+
+              <S.input>
+                <span>Especialidade</span>
+                
+                <input type="text" list="especialidade" name="especialidade" placeholder="..."/> 
+                <datalist id="especialidade">
+                  <option value="cirurgia"/>
+                  <option value="G.O"/>
+                  <option value="ORTOPEDIA"/>
+                  <option value="UROLOGIA"/>
+                </datalist>
+                
+              </S.input>
+
+              <S.input>
+                <span>Chave</span>
+                <input type="number" placeholder="NUMERO"></input>
+              </S.input>
+
+              <S.textarea>
+                <textarea placeholder="Observações" rows={3} name="descricao"></textarea>
+              </S.textarea>
+
+              <S.privativo>
+                <div id="privativo">
+
+                  <label class="rad-label">
+                    <input type="radio" class="rad-input" name="privativo" value="P"/>
+                    <div class="rad-design"></div>
+                    <div class="rad-text">P</div>
+                  </label>
+
+                  <label class="rad-label">
+                    <input type="radio" class="rad-input" name="privativo" value="M"/>
+                    <div class="rad-design"></div>
+                    <div class="rad-text">M</div>
+                  </label>
+
+                  <label class="rad-label">
+                    <input type="radio" class="rad-input" name="privativo" value="G"/>
+                    <div class="rad-design"></div>
+                    <div class="rad-text">G</div>
+                  </label>
+
+                  <label class="rad-label">
+                    <input type="radio" class="rad-input" name="privativo" value="GG"/>
+                    <div class="rad-design"></div>
+                    <div class="rad-text">GG</div>
+                  </label>
+
+                  <label class="rad-label">
+                    <input type="radio" class="rad-input" name="privativo" value="XG"/>
+                    <div class="rad-design"></div>
+                    <div class="rad-text">XG</div>
+                  </label>
+
+                </div>
+
+              </S.privativo>
+            </S.inputs>
+              <S.options>
+                <div>
+                  <input type="checkbox" name="entregue" />
+                  <span>Entregue</span>
+                </div>
+
+                
+                  <button type="button">Excluir</button>
+                
+
+                
+                  <button type="submit" name="enviar">enviar</button>
+                
+              </S.options>
+
 
 
         </S.Form>

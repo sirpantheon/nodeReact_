@@ -17,7 +17,7 @@ export const leftSide = styled.div `
     padding-left: 10px;
 
     h1{
-        font-size:50px;
+        font-size:250%;
         color:#000
     }
 

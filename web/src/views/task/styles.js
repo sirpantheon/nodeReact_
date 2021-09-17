@@ -14,7 +14,7 @@ export const FilterArea = Styled.div`
     display:flex;
     width:100%;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 15px;
 
     button{
         width:20%;
@@ -37,7 +37,7 @@ export const Title = Styled.div`
     border-bottom:3px solid #40407a;
     display:flex;
     justify-content:center;
-    margin:30px 0;
+    margin:35px 0;
 
     h3{
         color:#40407a;
@@ -52,6 +52,10 @@ export const Form = Styled.div`
     width:80%;
     display:flex;
     justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:50px;
+
 
 `
 export const typeIcons = Styled.div`
@@ -60,6 +64,7 @@ export const typeIcons = Styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    margin-bottom: 25px;
 
     .inative{
             opacity:0.5;
@@ -79,7 +84,7 @@ export const typeIcons = Styled.div`
         background:none;
         border-radius:50%;
         box-shadow: 10px 10px 12px 0 #40407a;
-        margin:0 45px;
+        margin:0 40px;
     }
 
     img{
@@ -87,14 +92,185 @@ export const typeIcons = Styled.div`
         width:70px; 
         height:70px;
         cursor:pointer;
-        
-        
-        
         &:hover{
             opacity:0.8;
 
         }
     }
+`
+export const inputs = Styled.div`
+    display:flex;   
+    width:80%;
+    flex-wrap:wrap;
+    height:500px;
+    margin-top:30px;
+
+`
+export const input = Styled.div`
+    display:flex;
+    width:50%;
+    height:50px;
+
+    .privativo{
+        color:red;
+    }
+
+    span{
+        width:20%;
+        color:#40407a;
+        padding:15px 20px;
+    }
+
+    input{
+        width:80%;
+        font-size:20px;
+        padding:5px;
+        border:none;
+        background:none;
+        border-bottom:1px solid #40407a;
+    }
+
+    select{
+        width:80%;
+        border:none;
+        border-bottom:1px solid #40407a;
+    }
+
+`
+export const privativo = Styled.div`
+
+    #privativo{
+        width:100%;
+        heigth:70px;
+        display: flex;
+        margin-left:45px;
+        justify-content:center;
+        align-items: center;
+        
+    }
+    /* MAIN */
+    /* =============================================== */
+    .rad-label {
+    display: flex;
+    align-items: center;
+
+    border-radius: 100px;
+    padding: 14px 16px;
+    margin: 10px 0;
+
+    cursor: pointer;
+    transition: .3s;
+    }
+
+    .rad-label:hover,
+    .rad-label:focus-within {
+    background: hsla(0, 0%, 80%, .14);
+    }
+
+    .rad-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+    }
+
+    .rad-design {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+
+    background: linear-gradient(to right bottom, #50508a, #40407a);
+    position: relative;
+    }
+
+    .rad-design::before {
+    content: '';
+
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+
+    background: hsl(0, 0%, 90%);
+    transform: scale(1.1);
+    transition: .3s;
+    }
+
+    .rad-input:checked+.rad-design::before {
+    transform: scale(0);
+    }
+
+    .rad-text {
+    color: #50508a;
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+
+    transition: .3s;
+    }
+
+    .rad-input:checked~.rad-text {
+    color: #40407a;
+    }
 
 
+`
+export const textarea = Styled.div`
+    display:flex;
+    width:50%;
+    flex-direction: column;
+    margin-left:20px;
+    
+
+    textarea{
+        padding:5px;
+        border: 1px solid #40407a;
+        heigth:70px;
+
+    }
+
+`
+export const options = Styled.div`
+
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    align-items:center;
+    
+
+    div{
+        display:flex;
+        background:none;        
+        font-size:20px;
+        justify-content:center;
+        align-items: center;
+        cursor: pointer;
+        font-weight:bold;
+
+        &:hover{
+            opacity:0.7;
+            text-shadow:0 0 20px #40407a, 0 0 30px #40407a, 0 0 40px #40407a;
+        }
+    }
+
+    button{
+        width:130px;
+        color:#FFF;
+        border-bottom:4px solid #40407a;
+        border-radius:50px;
+        background:#40407a;
+        cursor: pointer;
+        font-size:20px;
+
+        &:hover{
+            opacity:0.7;
+            box-shadow:0 4px 20px #40407a;
+            width:135px;
+        }
+    }
 `
