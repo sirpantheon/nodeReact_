@@ -1,0 +1,1 @@
+const isConnected = localStorage.getItem('@CC/macaddress')

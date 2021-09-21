@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './views/home';
-import Task from './views/task';
+
+import Routers from './routers/index'
 
 //aula 49
 
 ReactDOM.render(
   <React.StrictMode>
-    <Task />
+    <Routers />
   </React.StrictMode>,
   document.getElementById('root')
 );

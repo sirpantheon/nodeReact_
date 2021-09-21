@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div `
     width:100%;
     height:60px;
-    background:${props => props.actived ? '#F0F1F5' : '#40407a'};
+    background:${props => props.actived ? '#F0F1F5' : '#155E70'};
     color:#FFF;
     border-radius:5px;
     display:flex;
@@ -20,8 +20,8 @@ export const Container = styled.div `
 
     &:hover{
         background:#F0F1F5;
-        color:#40407a;
-        text-shadow: #40407a 1px 0 10px;
+        color:#155E70;
+        text-shadow: #155E70 1px 0 10px;
         box-shadow: 3px 3px #000;
         opacity:0.7
     }

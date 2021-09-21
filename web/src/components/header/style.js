@@ -5,8 +5,9 @@ export const Container = styled.div `
     width:100%;
     height:70px;
     background:#F0F1F5;
-    border-bottom:5px solid #40407a;
-    display:flex
+    border-bottom:5px solid #155E70;
+    display:flex;
+
 `
 
 export const leftSide = styled.div `
@@ -38,11 +39,11 @@ export const rightSide = styled.div `
         font-size:23px;
 
         &:hover{
-            color:#83D6DE;
+            color:#155E70;
         }
 
         span{
-            color:#ff0000;
+        
             background:#000;
             border-radius:40%
         }

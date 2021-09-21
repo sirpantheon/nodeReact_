@@ -1,6 +1,7 @@
 import React from 'react'
 import * as S from './style'
-import icone from '../../assets/masculino.png'
+
+import { Link } from 'react-router-dom'
 
 function Header({lateCount}){
     return (
@@ -11,14 +12,11 @@ function Header({lateCount}){
             </S.leftSide>
 
             <S.rightSide>
-                <a href="#">Inicio</a>
-                <a href="#">Registrar Chave</a>
-                <a href="#">Registrar Puérpera</a>
-                <a href="#">Sicronizar</a>
-                <a href="#">
-                    <img src="icone" alt=""/>
-                    <span>{lateCount}</span>                
-                </a>
+                <Link to="/">Inicio</Link>
+                <Link to="/task">Registrar Chave</Link>
+                <Link>Registrar Puérpera</Link>
+                <Link to="/usuario">Usuario</Link>
+
             </S.rightSide>
 
         </S.Container>

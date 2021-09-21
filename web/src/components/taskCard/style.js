@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div `
-    width:20%;
+    width:80%;
     height:220px;
     
     display: flex;
@@ -15,12 +15,16 @@ export const Container = styled.div `
     cursor:pointer;
     margin:30px;
     transition:all 0.3s ease;
-    
+
+    opacity: ${props => props.devolucao ? 0.5 : 1};
+
+    a{
+        text-decoration:none;
+    }
+
     &:hover{
         opacity:0.7
     }
-
-
 `
 export const BottomCard = styled.div`
     width:100%;
@@ -30,7 +34,7 @@ export const BottomCard = styled.div`
 
     strong{
         font-weight:bold;
-        color:#40407a;
+        color:#155E70;
     }
 
 `
@@ -39,8 +43,43 @@ export const TopCard = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+`
+export const chave = styled.div`
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+    .ativo{
+        display:flex;
+        background:#ffff00;
+        color:#000;
+        border-radius:50px;
+        width:40px;
+        height:40px;
+        align-items: center;
+        justify-content:center;
+        position:absolute;
+        margin-left:45px;
+        margin-top:25px;
+    }
+    .inativo{
+        display:flex;
+        background:#155E70;
+        color:#FFF;
+        border-radius:50px;
+        width:40px;
+        height:40px;
+        align-items: center;
+        justify-content:center;
+        position:absolute;
+        margin-left:45px;
+        margin-top:25px;
+    }
 
     img{
+        display:flex;
+        width:70px;
+        height:70px;
         margin-bottom:20px;
     }
     

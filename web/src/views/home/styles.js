@@ -12,9 +12,15 @@ export const FilterArea = Styled.div`
     margin-top: 20px;
 
     button{
-        width:20%;
+        font-size:10px;
+        width:13%;
         background:none;
         border:none;
+
+        span{
+            width:100%;
+            font-size: 30px;
+        }
     }
  
 `
@@ -23,19 +29,25 @@ export const Content = Styled.div`
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
+    margin-bottom:70px;
 
+    a{
+        width:23%;
+        text-decoration:none;
+        color:#155E70
+    }
 
 `
 
 export const Title = Styled.div`
     width:100%;
-    border-bottom:3px solid #40407a;
+    border-bottom:3px solid #155E70;
     display:flex;
     justify-content:center;
     margin:30px 0;
 
     h3{
-        color:#40407a;
+        color:#155E70;
         font-size:25px;
         position:relative;
         top:16px;

@@ -96,6 +96,22 @@ class TaskController {
                 return res.status(500).json(err)
             })
     }
+
+    async type(req, res) {
+        await taskModel.find({
+                'macaddress': { '$in': req.params.macaddress },
+                'type':{ '$in': req.params.type }
+            })
+            .sort('entrega')
+            .then(response => {
+                return res.status(200).json(response)
+            })
+            .catch(err => {
+                return res.status(500).json(err)
+            })
+    }
+
+
 }
 
 
