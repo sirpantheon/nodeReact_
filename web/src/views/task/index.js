@@ -4,6 +4,7 @@ import * as S from './styles'
 
   
 import api from '../../services/api'
+import isConnected from '../../utils/isConnect'
 
   //components
   
@@ -22,15 +23,12 @@ import TypeIcons from '../../utils/typeicons'
     const [ chave,setChave ]= useState()
     const [ privativo,setPrivativo ]= useState()
     const [ descricao,setDescricao ]= useState()
-    const [ macaddress,setMacaddress ]= useState('11:11:11:11:11:11')
+    const [ macaddress,setMacaddress ]= useState("11:11:11:11:11:11")
     const [ filterActived, setFilterActived]=useState()
     const [ tasks,setTasks ]=useState([])
     const [ lateCount,setLateCount ] = useState()
 
-    async function saveMac(){
-      await localStorage.setItem('@CC/macaddress',macaddress)
-    }
-  
+
 
     async function LoadTaskDetail(){
       await api.get(`/task/${match.params.id}`)
@@ -54,7 +52,7 @@ import TypeIcons from '../../utils/typeicons'
     })
   }
   async function lateVerify(){
-    await api.get(`/task/filter/late/11:11:11:11:11:11`)
+    await api.get(`/task/filter/late/11:11:11:11:11:11}`)
     .then(response=>{
       setLateCount(response.data.length)
     })

@@ -3,7 +3,7 @@ import * as S from './style'
 
 import { Link } from 'react-router-dom'
 
-function Header({lateCount}){
+function Header(){
     return (
         <S.Container>
 
@@ -15,7 +15,7 @@ function Header({lateCount}){
                 <Link to="/">Inicio</Link>
                 <Link to="/task">Registrar Chave</Link>
                 <Link>Registrar Puérpera</Link>
-                <Link to="/usuario">Usuario</Link>
+                {/*<Link to="/usuario">Usuario</Link>*/}
 
             </S.rightSide>
 

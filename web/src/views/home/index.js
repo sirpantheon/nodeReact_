@@ -11,8 +11,6 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import FilterCard from '../../components/filterCard'
 import TaskCard from '../../components/taskCard'
-import isConnected from '../../utils/isConnect'
-
 
 function Home() {
 
@@ -45,7 +43,7 @@ function Home() {
     <S.Container>
 
       <Header />
-
+      
       <S.FilterArea lateCount={lateCount}>
 
         <button type="button" onClick={()=>setFilterActived("all")}>
