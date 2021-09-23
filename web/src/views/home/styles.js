@@ -3,6 +3,7 @@ import Styled from 'styled-components'
 export const Container = Styled.div`
 
     width:100%;
+    align-items: center;
  
 `
 export const FilterArea = Styled.div`
@@ -29,7 +30,7 @@ export const Content = Styled.div`
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
-    margin-bottom:70px;
+    margin-bottom:50px;
 
     a{
         width:23%;
@@ -54,4 +55,14 @@ export const Title = Styled.div`
         background:#fff;
         padding:0px 20px;
     }
+`
+export const Entrega = Styled.div`
+    border-top:5px solid #155E70;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom:50px;
+    padding:5px;
+
 `

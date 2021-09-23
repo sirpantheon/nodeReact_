@@ -4,10 +4,8 @@ import * as S from './styles'
 
   
 import api from '../../services/api'
-import isConnected from '../../utils/isConnect'
 
   //components
-  
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import TypeIcons from '../../utils/typeicons'
@@ -139,8 +137,14 @@ import TypeIcons from '../../utils/typeicons'
                         index > 0 && 
                         <button type="button" onClick={()=>setType(index)}>
                             <img src={icon} alt="icon"
-                            className={type && type !== index && 'inative'}/>
+                            className={type && type !== index && 'inative'}/> 
+
                         </button>
+                     
+                     
+                        
+                        
+                        
                     ))
                 }
             </S.typeIcons>

@@ -1,6 +1,6 @@
 import React, {useState , useEffect } from 'react'
 
-import {Link , Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import * as S from './styles'
 
 import api from '../../services/api'
@@ -11,14 +11,21 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import FilterCard from '../../components/filterCard'
 import TaskCard from '../../components/taskCard'
+import Entrega from '../../components/entrega'
+
 
 function Home() {
+
+  let iconEntrega = []
+  for (let i = 0; i < 50; i++) {
+    iconEntrega.push(i)
+  }
 
   const [filterActived, setFilterActived]=useState('today')
   const [tasks,setTasks]=useState([])
   const [lateCount,setLateCount] = useState()
-  const [redirect,setRedirect] = useState(false)
 
+  
   async function loadTask(){
     await api.get(`/task/filter/${filterActived}/11:11:11:11:11:11`)
     .then(response=>{
@@ -37,6 +44,8 @@ function Home() {
     loadTask()
     lateVerify()
   },[filterActived])
+
+
 
 
     return (
@@ -60,18 +69,21 @@ function Home() {
         
         <button type="button" onClick={()=>setFilterActived("1")}>
           <FilterCard title="masculino"actived={filterActived === "1"} />
+          
         </button>
 
         <button type="button" onClick={()=>setFilterActived("2")}>
           <FilterCard title="feminino"actived={filterActived === "2"} />
+          
         </button>
 
         <button type="button" onClick={()=>setFilterActived("3")}>
           <FilterCard title="acompanhante"actived={filterActived === "3"} />
+          
         </button>
 
-        <button type="button" onClick={()=>setFilterActived("")}>
-          <FilterCard title="puerpera"actived={filterActived === ""} />
+        <button type="button" onClick={()=>setFilterActived("/")}>
+          <FilterCard title="puerpera"actived={filterActived === "/"} />
         </button>
 
       </S.FilterArea>
@@ -90,9 +102,22 @@ function Home() {
           ))
 
         }
+
       </S.Content>
 
-      <Footer/>
+      <S.Entrega>
+      {
+        iconEntrega.map((t , index )=>(
+          <Entrega type={t.type} entrega={t.entrega} chave={t.chave} index={index} />
+        ))
+
+      }
+      </S.Entrega>
+
+
+      <Footer />
+
+      
 
     </S.Container>
     )
