@@ -105,14 +105,14 @@ function Home() {
 
       </S.Content>
 
-      <S.Entrega>
+      {/*<S.Entrega>
       {
         iconEntrega.map((t , index )=>(
           <Entrega type={t.type} entrega={t.entrega} chave={t.chave} index={index} />
         ))
 
       }
-      </S.Entrega>
+    </S.Entrega>*/}
 
 
       <Footer />
