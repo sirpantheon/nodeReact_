@@ -14,8 +14,8 @@ function Header(){
             <S.rightSide>
                 <Link to="/">Inicio</Link>
                 <Link to="/task">Registrar Chave</Link>
-                <Link>Registrar Puérpera</Link>
-                {/*<Link to="/usuario">Usuario</Link>*/}
+                <Link to="/purpera">Registrar Puérpera</Link>
+                
 
             </S.rightSide>
 

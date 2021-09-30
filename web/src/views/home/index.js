@@ -11,8 +11,6 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import FilterCard from '../../components/filterCard'
 import TaskCard from '../../components/taskCard'
-import Entrega from '../../components/entrega'
-
 
 function Home() {
 
@@ -44,9 +42,6 @@ function Home() {
     loadTask()
     lateVerify()
   },[filterActived])
-
-
-
 
     return (
     <S.Container>
@@ -82,10 +77,6 @@ function Home() {
           
         </button>
 
-        <button type="button" onClick={()=>setFilterActived("/")}>
-          <FilterCard title="puerpera"actived={filterActived === "/"} />
-        </button>
-
       </S.FilterArea>
 
       <S.Title>
@@ -103,16 +94,8 @@ function Home() {
 
         }
 
+
       </S.Content>
-
-      {/*<S.Entrega>
-      {
-        iconEntrega.map((t , index )=>(
-          <Entrega type={t.type} entrega={t.entrega} chave={t.chave} index={index} />
-        ))
-
-      }
-    </S.Entrega>*/}
 
 
       <Footer />

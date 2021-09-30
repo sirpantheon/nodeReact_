@@ -215,7 +215,7 @@ export const privativo = Styled.div`
     }
 
     .rad-input:checked~.rad-text {
-    color: #40407a;
+    color: #155E70;
     }
 
 
@@ -229,7 +229,7 @@ export const textarea = Styled.div`
 
     textarea{
         padding:5px;
-        border: 1px solid #40407a;
+        border: 1px solid #155E70;
         heigth:70px;
 
     }
@@ -254,22 +254,22 @@ export const options = Styled.div`
 
         &:hover{
             opacity:0.7;
-            text-shadow:0 0 20px #40407a, 0 0 30px #40407a, 0 0 40px #40407a;
+            text-shadow:0 0 20px #155E70, 0 0 30px #155E70, 0 0 40px #155E70;
         }
     }
 
     button{
         width:130px;
         color:#FFF;
-        border-bottom:4px solid #40407a;
+        border-bottom:4px solid #155E70;
         border-radius:50px;
-        background:#40407a;
+        background:#155E70;
         cursor: pointer;
         font-size:20px;
 
         &:hover{
             opacity:0.7;
-            box-shadow:0 4px 20px #40407a;
+            box-shadow:0 4px 20px #155E70;
             width:135px;
         }
     }
