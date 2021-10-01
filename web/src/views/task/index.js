@@ -132,22 +132,26 @@ import TypeIcons from '../../utils/typeicons'
 
         <S.Form>    
             <S.typeIcons>
-                {
-                    TypeIcons.map((icon,index) =>(
-                        index > 0 && 
-                        <button type="button" onClick={()=>setType(index)}>
-                            <img src={icon} alt="icon"
-                            className={type && type !== index && 'inative'}/> 
+                <S.iconsContent>
+                  {
+                      TypeIcons.map((icon,index) =>(
+                          index > 0 && 
+                          <button type="button" onClick={()=>setType(index)}>
+                              <img src={icon} alt="icon"
+                              className={type && type !== index && 'inative'}/> 
+                          </button>
+                      ))
+                  }
+                </S.iconsContent>
 
-                        </button>
-                     
-                     
-                        
-                        
-                        
-                    ))
-                }
-            </S.typeIcons>
+                <S.legendaIcons>
+                  <h3>Masculino</h3>
+                  <h3>Feminino</h3>
+                  <h3>Acompanhante</h3>
+                </S.legendaIcons>
+            </S.typeIcons> 
+ 
+
             <S.inputs>
               <S.input>
                 <span>Nome</span>
@@ -164,10 +168,22 @@ import TypeIcons from '../../utils/typeicons'
                 
                 <input type="text" list="especialidade" name="especialidade" placeholder="..." onChange={e => setEspecialidade(e.target.value)} value={especialidade}/> 
                 <datalist id="especialidade">
-                  <option value="CIRURGIA"/>
                   <option value="G.O"/>
-                  <option value="ORTOPEDIA"/>
-                  <option value="UROLOGIA"/>
+                  <option value="Ortopedia"/>
+                  <option value="Captação De Orgãos"/>
+                  <option value="Urologia"/>
+                  <option value="Mastologia"/>
+                  <option value="Medicina Intensiva"/>
+                  <option value="Nefrologia"/>
+                  <option value="Clínica Médica"/>
+                  <option value="Cirurgia Pediátrica"/>
+                  <option value="Cirurgia Geral"/>
+                  <option value="Cirurgia Vascular"/>
+                  <option value="Anestesiologia"/>
+                  <option value="Neurocirurgia"/>
+                  <option value="Infectologia"/>
+                  <option value="Enfermagen"/>
+                  <option value="Outros"/>
                 </datalist>
                 
               </S.input>

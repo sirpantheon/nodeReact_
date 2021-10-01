@@ -32,18 +32,18 @@ export const inputs = Styled.div`
     width:80%;
     flex-wrap:wrap;
     height:300px;
-    margin-top:30px;
+    margin-top:25px;
 
 `
 export const input = Styled.div`
     display:flex;
     width:100%;
-    height:30px;
+    height:25px;
 
     span{
         width:5%;
         color:#155E70;
-        padding:15px 20px;
+        padding:10px 15px;
     }
 
     input{
@@ -105,14 +105,18 @@ export const Content = Styled.div`
     
     display:flex;
     width:80%;
-    height:420px;
+    height:470px;
     justify-content:center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     background:#155E70;
     margin-top:10px;
-    overflow-y:scroll;
-    padding:70px 0;
+    overflow-y: auto;
+    padding-top:10px;
+    flex-wrap: wrap;
+
+
+    
 
 
     ::-webkit-scrollbar {

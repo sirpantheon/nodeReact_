@@ -36,7 +36,7 @@ import CardPuerpera from '../../components/cardPuerpera'
       else if(!leito)
         return alert('por favor preencha o leito')
       
-        await api.post('/task/purpera',{
+        await api.post('/task/puerpera',{
           macaddress,
           nome,
           registro,
@@ -87,12 +87,12 @@ import CardPuerpera from '../../components/cardPuerpera'
             <S.inputs>
               <S.input>
                 <span>Nome</span>
-                <input type="text" placeholder="COLABORADOR/ACOMPANHANTE" onChange={e => setNome(e.target.value)} value={nome}/>
+                <input type="text" placeholder="NOME DO PACIENTE" onChange={e => setNome(e.target.value)} value={nome}/>
               </S.input>
 
               <S.input>
                 <span>Registro</span>
-                <input type="text" placeholder="Registro" onChange={e => setRegistro(e.target.value)} value={registro}/>
+                <input type="text" placeholder="REGISTRO DO PACIENTE" onChange={e => setRegistro(e.target.value)} value={registro}/>
               </S.input>
 
               <S.input>

@@ -60,11 +60,12 @@ export const Form = Styled.div`
 `
 export const typeIcons = Styled.div`
 
-    width:100%;
+    width:50%;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     margin-bottom: 25px;
+    flex-direction: column;
 
     .inative{
             opacity:0.5;
@@ -84,7 +85,7 @@ export const typeIcons = Styled.div`
         background:none;
         border-radius:50%;
         box-shadow: 10px 10px 12px 0 #40407a;
-        margin:0 40px;
+        
     }
 
     img{
@@ -273,4 +274,32 @@ export const options = Styled.div`
             width:135px;
         }
     }
+`
+export const legendaIcons = Styled.div`
+
+    width:87%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#b4b4b4;
+
+    h3{
+        font-size:25px;
+        width:135px;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+`
+
+export const iconsContent = Styled.div`
+
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
 `

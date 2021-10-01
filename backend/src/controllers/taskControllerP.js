@@ -29,7 +29,7 @@ class puerpera {
 
     async all(req, res) {
         await taskModel.find({ macaddress: { '$in': req.params.macaddress } })
-            .sort('data')
+            .sort('created')
             .then(response => {
                 return res.status(200).json(response)
             })

@@ -3,11 +3,15 @@ import styled from 'styled-components'
 export const Container = styled.div `
     display:flex;
     width:90%;
-    height:70px;
+    height:50px;
     background:#FFF;
     border-radius:15px;
     margin: 5px 0;
     justify-content: space-between;
+    
+    &:hover{
+        opacity:0.7;
+    }
     
     
 `
