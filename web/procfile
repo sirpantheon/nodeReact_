@@ -1,1 +1,1 @@
-web: npm start ./nodeReact/web
+web: npm start ./web

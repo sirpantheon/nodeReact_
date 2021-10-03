@@ -4,7 +4,7 @@
     "description": "",
     "main": "./nodeReact_/backend/src/index.js",
     "scripts": {
-        "start": " node ./nodeReact/backend/src/index.js"
+        "start": "node src/index.js"
     },
     "keywords": [],
     "author": "johnatan paixao",
