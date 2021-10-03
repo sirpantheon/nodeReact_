@@ -1,0 +1,2 @@
+backend: node ./nodeReact/backend/src/index.js
+web: npm start ./nodeReact/web
