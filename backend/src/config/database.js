@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv')
 
-const url = 'mongodb://localhost:27017/controleCC'
+dotenv.config()
 
-mongoose.connect(url, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_LOCAL, { useNewUrlParser: true })
 
 module.exports = mongoose
