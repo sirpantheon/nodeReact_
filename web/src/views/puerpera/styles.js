@@ -115,10 +115,6 @@ export const Content = Styled.div`
     padding-top:10px;
     flex-wrap: wrap;
 
-
-    
-
-
     ::-webkit-scrollbar {
         width: 10px;
       }
